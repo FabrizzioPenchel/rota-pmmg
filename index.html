@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head><script>
+    // Se não houver um usuário logado no navegador, manda para o login
+    if (!localStorage.getItem('usuarioLogado')) {
+        window.location.href = 'login.html';
+    }
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROTA PMMG | Seu caminho começa aqui</title>
