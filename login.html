@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ROTA PMMG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo específico para centralizar o login */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-card {
+            background: #161d2f;
+            padding: 40px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .login-card h2 { margin-bottom: 20px; }
+        .input-group { margin-bottom: 20px; text-align: left; }
+        .input-group label { display: block; margin-bottom: 8px; color: #94a3b8; }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background: #0b0f1a;
+            color: white;
+        }
+        .btn-login {
+            width: 100%;
+            background: #4ade80;
+            color: #0b0f1a;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="logo" style="margin-bottom: 20px;">ROTA <span>PMMG</span></div>
+        <h2>Bem-vindo, Recruta!</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Seu Nome</label>
+                <input type="text" id="username" placeholder="Digite seu nome" required>
+            </div>
+            <button type="submit" class="btn-login">Entrar na Plataforma</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('username').value;
+            // Salva o nome no navegador
+            localStorage.setItem('usuarioPMMG', name);
+            // Redireciona para a home
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

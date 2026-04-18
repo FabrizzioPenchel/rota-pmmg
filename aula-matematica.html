@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raciocini Logico | ROTA PMMG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .aula-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Menu Lateral de Tópicos */
+        .sidebar-aulas {
+            background-color: #161d2f;
+            padding: 30px;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-aulas h3 { margin-bottom: 20px; font-size: 1.1rem; }
+
+        .lista-topicos { list-style: none; }
+        .lista-topicos li {
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            border: 1px solid transparent;
+        }
+
+        .lista-topicos li.ativo {
+            background: rgba(74, 222, 128, 0.1);
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        .lista-topicos li:hover:not(.ativo) {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+        }
+
+        /* Área do Conteúdo */
+        .conteudo-aula {
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            border: 1px solid #334155;
+        }
+
+        .texto-resumo {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .texto-resumo h2 { margin-bottom: 20px; color: #4ade80; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">ROTA <span>PMMG</span></a></div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="aula-container">
+        <aside class="sidebar-aulas">
+            <h3>Tópicos da Matéria</h3>
+            <ul class="lista-topicos">
+                <li class="ativo">01. Conectivos Logicos </li>
+                <li>02. Tabelas Verdade</li>
+                <li>03. Negacao de Preposicoes</li>
+                <li>04. Equivalencias Logicas</li>
+            </ul>
+        </aside>
+
+        <main class="conteudo-aula">
+    <div class="video-container">
+        <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/i8jbzEWEOYk" 
+            title="Uso dos Porquês - Aula PMMG" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="texto-resumo">
+    <h2>Conectivos Logicos</h2>
+    <p>Conectivos lógicos são termos (como "e", "ou", "se... então") que unem duas ou mais proposições simples para formar proposições compostas, definindo seu valor de verdade (verdadeiro ou falso) :</p>
+    
+    <ul class="lista-estudo">
+        <li><strong>Negacao:</strong> (¬) apenas inverte o valor (se é V vira F).</li>
+        <li><strong>Conjuncao:</strong> (E) Somente sera verdade se todos forem verdade(^).</li>
+        <li><strong>Disjuncao:</strong> (OU) Somente sera falso se todos forem falsos (v).</li>
+        <li><strong>Disj. Exclusiva:</strong>(v)Quando os valores são diferentes().</li>
+        <li><strong>Condicional:</strong>(Se entao) Falsa apenas se a primeira for verdadeira e a segunda falsa (→).</li>
+        <li><strong>Bicondicional:</strong>(Se somente se) Verdadeira se ambas forem verdadeiras ou ambas falsas   (↔).</li>
+    </ul>
+
+    
+</div>
+</main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
