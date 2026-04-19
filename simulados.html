@@ -3,50 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado PMMG | ROTA PMMG</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .quiz-container {
-            max-width: 800px;
-            margin: 50px auto;
-            background: #161d2f;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .pergunta { font-size: 1.4rem; margin-bottom: 25px; color: #4ade80; }
-        .opcoes { display: flex; flex-direction: column; gap: 15px; }
-        .opcao-btn {
-            background: #0b0f1a;
-            border: 1px solid #334155;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: left;
-            transition: 0.3s;
-        }
-        .opcao-btn:hover { border-color: #4ade80; background: rgba(74, 222, 128, 0.05); }
-        .resultado { text-align: center; }
-        .score { font-size: 3rem; font-weight: 800; color: #4ade80; }
-    </style>
+    <title>Simulado PMMG</title>
+    <link rel="stylesheet" href="Style.css"> 
 </head>
 <body>
+
     <header>
         <nav class="container">
-            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">ROTA <span>PMMG</span></a></div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aula-portugues.html">Matérias</a></li>
-            </ul>
+            <div class="logo">ROTA <span>PMMG</span></div>
         </nav>
     </header>
 
     <main class="container">
-        <div id="quiz-container" class="quiz-container">
+        <section class="materias">
+            <h2>Simulado PMMG</h2>
+
+            <div class="card simulado-card">
+                <div id="quiz-container">
+                    <button onclick="carregarPergunta()" class="btn btn-primary">
+                        Iniciar Simulado
+                    </button>
+                </div>
             </div>
+        </section>
     </main>
 
     <script src="simulado.js"></script>
+
 </body>
 </html>
